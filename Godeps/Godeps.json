@@ -1,0 +1,35 @@
+{
+	"ImportPath": "github.com/tamizhvendan/golang-web-boilerplate",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v72",
+	"Deps": [
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.10.0",
+			"Rev": "4b6ea7319e214d98c938f12692336f7ca9348d6b"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Comment": "v1.1-7-g08b5f42",
+			"Rev": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42"
+		},
+		{
+			"ImportPath": "github.com/julienschmidt/httprouter",
+			"Comment": "v1.1-38-g4563b0b",
+			"Rev": "4563b0ba73e4db6c6423b60a26f3cadd2e9a1ec9"
+		},
+		{
+			"ImportPath": "github.com/satori/go.uuid",
+			"Rev": "e673fdd4dea8a7334adbbe7f57b7e4b00bdc5502"
+		},
+		{
+			"ImportPath": "github.com/urfave/negroni",
+			"Comment": "v0.2.0-69-g04499b6",
+			"Rev": "04499b690af3b520d090d4d61dbc7d8c67438b3f"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "c200b10b5d5e122be351b67af224adc6128af5bf"
+		}
+	]
+}
