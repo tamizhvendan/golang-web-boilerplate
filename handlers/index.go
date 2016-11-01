@@ -3,6 +3,7 @@ package handlers
 import (
 	"net/http"
 
+	"github.com/deckarep/golang-set"
 	"github.com/julienschmidt/httprouter"
 	. "github.com/tamizhvendan/golang-web-boilerplate/infrastructure"
 )
@@ -13,6 +14,8 @@ type IndexHandler struct {
 
 func (h *IndexHandler) AddRoutes(r *httprouter.Router) {
 	r.GET("/greet/:name", AppErrorHandler(h.Greet))
+	securedGreetScopes := mapset.NewSet("greet.other")
+	r.GET("/secured_greet/:name", AppErrorHandler(HasScopes(securedGreetScopes, h.Greet)))
 }
 
 func (h *IndexHandler) Greet(w http.ResponseWriter, r *http.Request, ps httprouter.Params) *AppError {

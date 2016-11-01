@@ -15,6 +15,7 @@ func main() {
 
 	n := negroni.Classic()
 	n.Use(negroni.HandlerFunc(middlewares.RequestId))
+	n.Use(negroni.HandlerFunc(middlewares.AuthScopes))
 	n.UseHandler(context.ClearHandler(router))
 	n.Run(":3000")
 }
